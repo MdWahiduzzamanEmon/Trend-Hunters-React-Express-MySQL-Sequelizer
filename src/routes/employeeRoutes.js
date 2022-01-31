@@ -18,4 +18,6 @@ router.get("/getAllEmployees", employeeController.getAllEmployees);
 
 //get one employee by email
 router.get("/getEmployeeByEmail/:email", employeeController.getEmployeeByEmail);
+
+
 module.exports = router;
