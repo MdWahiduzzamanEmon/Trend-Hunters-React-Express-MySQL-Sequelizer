@@ -73,8 +73,29 @@ const createEmployee = async (req, res) => {
    
 }
 
+//get one employee by email
+const getEmployeeByEmail = async (req, res) => {
+  const { email } = req.params;
+  try {
+    const employee = await Employee.findOne({
+      where: {
+        email,
+      },
+    });
+    if (employee) {
+      res.status(200).send(employee);
+    } else {
+      res.status(404).send({
+        message: `Employee with email ${email} not found.`,
+      });
+    }
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
 
 module.exports = {
-    createEmployee,
-    getAllEmployees
-}
+  createEmployee,
+  getAllEmployees,
+  getEmployeeByEmail,
+};
