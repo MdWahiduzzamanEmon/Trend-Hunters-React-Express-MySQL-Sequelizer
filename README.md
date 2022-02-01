@@ -34,6 +34,11 @@
     ```sh 
      http://localhost:5000/
      ```
+6. mailTrap uerid, Password:
+     ```sh
+     USER_ID="96b2763a9a8770"
+     USER_PASS="b15a107e5edb19"
+     ```
 
 ## Client-Side
 1. Clone this repository for clientSide
